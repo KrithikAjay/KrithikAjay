@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userViewModel"
+            type="com.krithik.notes.viewmodel.UserViewModel" />
+    </data>
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:fontFamily="@font/amarante"
+        android:hint="User's name"
+        android:inputType="textPersonName"
+        android:text="@={userViewModel.inputName}"
+        android:textAlignment="textStart"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/email_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:fontFamily="@font/amarante"
+        android:hint="@string/user_s_email"
+        android:inputType="textPersonName"
+        android:text="@={userViewModel.inputEmail}"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_or_update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/amaranth"
+            android:text="@={userViewModel.saveOrUpdateButtonText}"
+            android:onClick="@{() -> userViewModel.saveOrUpdate()}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Save" />
+
+        <Button
+            android:id="@+id/clear_all_or_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/amaranth"
+            android:onClick="@{() -> userViewModel.clearAllOrDelete()}"
+            android:text="@={userViewModel.clearAllOrDeleteButtonText}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Clear All" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/list_item"/>
+</LinearLayout>
+</layout>

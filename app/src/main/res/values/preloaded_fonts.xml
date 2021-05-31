@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/amarante</item>
+        <item>@font/amaranth</item>
+        <item>@font/averia_gruesa_libre</item>
+        <item>@font/baumans</item>
+        <item>@font/courgette</item>
+        <item>@font/cousine</item>
+        <item>@font/dekko</item>
+        <item>@font/delius_swash_caps</item>
+        <item>@font/inder</item>
+        <item>@font/sarala</item>
+    </array>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="subscriber_s_email">Subscriber\'s email</string>
+    <string name="subscriber_s_name">Subscriber\'s name</string>
+    <string name="user_s_name">User\'s name</string>
+    <string name="user_s_email">User\'s email</string>
+</resources>
